@@ -6,7 +6,7 @@ function get_icon(animal) {
     var now_time = now.getTime();
     var birth = animal[4];
     var age = now_time - birth;
-    alert(age);
+    alert(now_time + " - " + birth + " = " + age);
     var genotype = animal[5];
     var icon = "";
     if (species === "Reticulated Giraffe") {
