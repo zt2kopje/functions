@@ -4,12 +4,13 @@ function get_icon(animal) {
     var sex = animal[2];
     var now = new Date;
     var age = now.getTime() - animal[4];
+    alert(age);
     var genotype = animal[5];
     var icon = "";
     if (species === "Reticulated Giraffe") {
-        if (age < 5184000000) {
-	    icon = "https://i.imgur.com/UglWPRZ.png";
-	} else {
+//        if (age < 5184000000) {
+//	    icon = "https://i.imgur.com/UglWPRZ.png";
+//	} else {
 //	    if (sex === "Male") {
 //	        if (genotype.includes("B") {
 		    icon = "https://i.imgur.com/hXUzugd.png";
