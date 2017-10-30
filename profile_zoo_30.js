@@ -31,7 +31,10 @@ var profile_zoo = {
   thumbnail : [16, 16],
   closeFunction : "fade",
   users : [
-    ["5063823", "Reticulated Giraffe", "Male", "Simon", 1509368099413, "BB", 0.8, "1st Place - Ice Photography Contest"],
+    ["5063823", "Reticulated Giraffe", "Male", "Simon", 1509368099413, "BB", 0.8, "1st Place - Royal Giraffe Parade"],
+    ["5063823", "Reticulated Giraffe", "Female", "Cinderella", 150936809941, "Bb", 0.8, "2nd Place - Royal Giraffe Parade"],
+    ["5063823", "Reticulated Giraffe", "Female", "Georgia", 150936809941, "bb", 0.8, "Escaped from a Circus"],
+    ["5063823", "Reticulated Giraffe", "Male", "George", 150936809941, "bb", 0.8, "Eloped with Georgia"],
   ]
 };
 
@@ -53,7 +56,7 @@ var awards = {
         var award = profile_zoo.users[a];
 	var icon_64 = get_icon(award);
         if ($("." + award[0] + "-awards").size() === 0 && location.href.indexOf('/profile/' + award[0] + '/') !== -1) {
-            $("td.c_user").parent().after('<tr><td><dt>' + profile_zoo.name + ':</dt></td><td><dd class="' + award[0] + '-awards"><img onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" src="' + icon_64 + '" alt="' + award[1] + '" width="' + profile_zoo.thumbnail[0] + 'px" height="' + profile_zoo.thumbnail[1] + 'px" /></dd></td></tr>');
+            $("td.c_user").parent().after('<tr><td><dt>' + profile_zoo.name + ':</dt></td><td><dd class="' + award[0] + '-awards"><img onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" src="' + icon_64 + '" alt="' + award[1] + '/></dd></td></tr>');
         } else if ($("." + award[0] + "-awards").size() === 0) {
 	    $("a.member[href=" + main_url + "profile/" + award[0] + "/]").parent().parent().next().find("dl.user_info dd.spacer").before('<dt>' + profile_zoo.name + ':</dt><dd class="' + award[0] + '-awards"><img onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" src="' + icon_64 + '" alt="' + award[1] + '" width="' + profile_zoo.thumbnail[0] + 'px" height="' + profile_zoo.thumbnail[1] + 'px" /></dd>');
         } else {
