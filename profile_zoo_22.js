@@ -3,7 +3,7 @@ function get_icon(animal) {
     var species = animal[1];
     var sex = animal[2];
     var now = new Date;
-    var age = Number(now.getTime() - animal[4]);
+    var age = now.getTime() - animal[4]);
     alert(age);
     var genotype = animal[5];
     var icon = "";
