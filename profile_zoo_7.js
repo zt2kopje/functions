@@ -4,7 +4,7 @@ var profile_zoo = {
   thumbnail : [16, 16],
   closeFunction : "fade",
   users : [
-    [5063823,"1 - Patrick Dangerfield","http://b3.ifrm.com/30609/91/0/p3005856/card_1_p_dangerfield.png","Geelong Cats","2017"],
+    [5063823,"Reticulated Giraffe","http://b3.ifrm.com/30609/91/0/p3005856/card_1_p_dangerfield.png","Geelong Cats","2017"],
     [5063823,"2 - Dustin Martin","http://b3.ifrm.com/30609/91/0/p3005857/card_2_d_martin.png","Richmond Tigers","2017"],
     [5063823,"3 - Marcus Bontempelli","http://b3.ifrm.com/30609/91/0/p3005858/card_3_m_bontempelli.png","Western Bulldogs","2017"],
     [5063823,"4 - Josh Kennedy","http://b3.ifrm.com/30609/91/0/p3005859/card_4_j_kennedy.png","Sydney Swans","2017"],
@@ -38,7 +38,7 @@ var awards = {
         if ($("." + award[0] + "-awards").size() === 0 && location.href.indexOf('/profile/' + award[0] + '/') !== -1) {
             $("td.c_user").parent().after('<tr><td><dt>' + profile_zoo.name + ':</dt></td><td><dd class="' + award[0] + '-awards"><img onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" src="' + award[2] + '" alt="' + award[1] + '" width="' + profile_zoo.thumbnail[0] + 'px" height="' + profile_zoo.thumbnail[1] + 'px" /></dd></td></tr>');
         } else if ($("." + award[0] + "-awards").size() === 0) {
-	    $("a.member[href=" + main_url + "profile/" + award[0] + "/]").parent().parent().next().find("dl.dynamo_user_info dd.spacer").before('<dt>' + profile_zoo.name + ':</dt><dd class="' + award[0] + '-awards"><img onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" src="' + award[2] + '" alt="' + award[1] + '" width="' + profile_zoo.thumbnail[0] + 'px" height="' + profile_zoo.thumbnail[1] + 'px" /></dd>');
+	    $("a.member[href=" + main_url + "profile/" + award[0] + "/]").parent().parent().next().find("dl.user_info dd.spacer").before('<dt>' + profile_zoo.name + ':</dt><dd class="' + award[0] + '-awards"><img onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" src="' + award[2] + '" alt="' + award[1] + '" width="' + profile_zoo.thumbnail[0] + 'px" height="' + profile_zoo.thumbnail[1] + 'px" /></dd>');
         } else {
             $("." + award[0] + "-awards").append('<img onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" src="' + award[2] + '" alt="' + award[1] + '" width="' + profile_zoo.thumbnail[0] + 'px" height="' + profile_zoo.thumbnail[1] + 'px" />');
         }
