@@ -1,7 +1,7 @@
 // Created by Viral of Viral's Modifications - http://viralsmods.com
 var profile_zoo = {
   name : "Footy Cards",
-  thumbnail : [30, 45],
+  thumbnail : [16, 16],
   closeFunction : "fade",
   users : [
     [5063823,"1 - Patrick Dangerfield","http://b3.ifrm.com/30609/91/0/p3005856/card_1_p_dangerfield.png","Geelong Cats","2017"],
