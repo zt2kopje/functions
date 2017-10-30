@@ -9,20 +9,18 @@ function get_icon(animal) {
     if (species === "Reticulated Giraffe") {
         if (age < 5184000000) {
 	    icon = "https://i.imgur.com/UglWPRZ.png";
-	} else {
-	    if (sex === "Male") {
-	        if (genotype.includes("B") {
-		    icon = "https://i.imgur.com/hXUzugd.png";
-		} else {
-		    icon = "https://i.imgur.com/NAGOArt.png";
-		}
+	} else if (sex === "Male") {
+	    if (genotype.includes("B")) {
+		icon = "https://i.imgur.com/hXUzugd.png";
 	    } else {
-	        if (genotype.includes("B") {
-		    icon = "https://i.imgur.com/mtsXnR7.png";
-		} else {
-		    icon = "https://i.imgur.com/ar2FEY1.png";
-		}
+	        icon = "https://i.imgur.com/NAGOArt.png";
 	    }
+	} else {
+	    if (genotype.includes("B")) {
+	        icon = "https://i.imgur.com/mtsXnR7.png";
+	    } else {
+	        icon = "https://i.imgur.com/ar2FEY1.png";
+       	    }
 	}
     }
     return icon;
