@@ -66,7 +66,7 @@ var awards = {
             var award = profile_zoo.users[a];
             var pos = awards.mouse.locate(event);
             awards.tooltip.coords = [pos[0], pos[1]];
-            if ($("#" + a + "-tooltip").size() === 0) $("body").append('<div id="' + a + '-tooltip" style="position:absolute;max-width:500px;"><table><tbody><tr><td style="padding: 0px;"><img src="' + 'https://i.imgur.com/mtsXnR7.png' + '" alt="' + award[1] + '" /></td><td>' + award[3] + '<hr /><b>' + award[1] + '</b> | ' + award[2] + '<hr /><i> ' + award[7] + '</i></td></tr></tbody></table></div>');
+            if ($("#" + a + "-tooltip").size() === 0) $("body").append('<div id="' + a + '-tooltip" style="position:absolute;max-width:500px;"><table><tbody><tr><td style="padding: 0px;"><img src="' + get_icon(award) + '" alt="' + award[1] + '" /></td><td>' + award[3] + '<hr /><b>' + award[1] + '</b> | ' + award[2] + '<hr /><i> ' + award[7] + '</i></td></tr></tbody></table></div>');
             var elem = document.getElementById(a + "-tooltip");
             elem.style.left = pos[0] + 10 + "px";
             elem.style.top = pos[1] - 250 + "px";
