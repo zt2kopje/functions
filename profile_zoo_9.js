@@ -90,6 +90,7 @@ var awards = {
     }
 };
 get_icon(animal) {
+    alert(animal);
     var species = animal[1];
     var sex = animal[2];
     var now = new Date;
