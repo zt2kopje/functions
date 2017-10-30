@@ -82,8 +82,8 @@ var awards = {
             var pos = awards.mouse.locate(event);
             var elem = document.getElementById(awards.tooltip.current + "-tooltip");
             if (elem !== null) {
-                elem.style.left = pos[0] + 10 + "px";
-                elem.style.top = pos[1] - 250 + "px";
+                elem.style.left = pos[0];
+                elem.style.top = pos[1];
             } else {
                 document.onmousemove = null;
             }
