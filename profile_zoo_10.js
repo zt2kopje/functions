@@ -89,7 +89,7 @@ var awards = {
         }
     }
 };
-get_icon(animal) {
+function get_icon(animal) {
     alert(animal);
     var species = animal[1];
     var sex = animal[2];
