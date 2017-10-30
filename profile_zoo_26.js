@@ -3,29 +3,26 @@ function get_icon(animal) {
     var species = animal[1];
     var sex = animal[2];
     var now = new Date;
-    var now_time = now.getTime();
-    var birth = animal[4];
-    var age = now_time - birth;
-    alert(now_time + " - " + birth + " = " + age);
+    var age = now.getTime() - animal[4];
     var genotype = animal[5];
     var icon = "";
     if (species === "Reticulated Giraffe") {
         if (age < 5184000000) {
 	    icon = "https://i.imgur.com/UglWPRZ.png";
 	} else {
-//	    if (sex === "Male") {
-//	        if (genotype.includes("B") {
+	    if (sex === "Male") {
+	        if (genotype.includes("B") {
 		    icon = "https://i.imgur.com/hXUzugd.png";
-//		} else {
-//		    icon = "https://i.imgur.com/NAGOArt.png";
-//		}
-//	    } else {
-//	        if (genotype.includes("B") {
-//		    icon = "https://i.imgur.com/mtsXnR7.png";
-//		} else {
-//		    icon = "https://i.imgur.com/ar2FEY1.png";
-//		}
-//	    }
+		} else {
+		    icon = "https://i.imgur.com/NAGOArt.png";
+		}
+	    } else {
+	        if (genotype.includes("B") {
+		    icon = "https://i.imgur.com/mtsXnR7.png";
+		} else {
+		    icon = "https://i.imgur.com/ar2FEY1.png";
+		}
+	    }
 	}
     }
     return icon;
@@ -36,7 +33,7 @@ var profile_zoo = {
   thumbnail : [16, 16],
   closeFunction : "fade",
   users : [
-    ["5063823", "Reticulated Giraffe", "Male", "Simon", 1509275492, "BB", 0.8, "1st Place - Ice Photography Contest"],
+    ["5063823", "Reticulated Giraffe", "Male", "Simon", 1509368099413, "BB", 0.8, "1st Place - Ice Photography Contest"],
   ]
 };
 
