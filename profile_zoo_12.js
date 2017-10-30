@@ -1,4 +1,34 @@
 // Created by Viral of Viral's Modifications - http://viralsmods.com
+function get_icon(animal) {
+    alert(animal);
+    var species = animal[1];
+    var sex = animal[2];
+    var now = new Date;
+    var age = now.getTime() - animal[4];
+    var genotype = animal[5];
+    var icon = "";
+    if (species === "Reticulated Giraffe") {
+        if (age < 5184000000) {
+	    icon = "https://i.imgur.com/UglWPRZ.png";
+	} else {
+	    if (sex === "Male") {
+	        if (genotype.includes("B") {
+		    icon = "https://i.imgur.com/hXUzugd.png";
+		} else {
+		    icon = "https://i.imgur.com/NAGOArt.png";
+		}
+	    } else {
+	        if (genotype.includes("B") {
+		    icon = "https://i.imgur.com/mtsXnR7.png";
+		} else {
+		    icon = "https://i.imgur.com/ar2FEY1.png";
+		}
+	    }
+	}
+    }
+    return icon;
+}
+
 var profile_zoo = {
   name : "Animal Collection",
   thumbnail : [16, 16],
@@ -89,33 +119,4 @@ var awards = {
         }
     }
 };
-//function get_icon(animal) {
-//    alert(animal);
-//    var species = animal[1];
-//    var sex = animal[2];
-//    var now = new Date;
-//    var age = now.getTime() - animal[4];
-//    var genotype = animal[5];
-//    var icon = "";
-//    if (species === "Reticulated Giraffe") {
-//        if (age < 5184000000) {
-//	    icon = "https://i.imgur.com/UglWPRZ.png";
-//	} else {
-//	    if (sex === "Male") {
-//	        if (genotype.includes("B") {
-//		    icon = "https://i.imgur.com/hXUzugd.png";
-//		} else {
-//		    icon = "https://i.imgur.com/NAGOArt.png";
-//		}
-//	    } else {
-//	        if (genotype.includes("B") {
-//		    icon = "https://i.imgur.com/mtsXnR7.png";
-//		} else {
-//		    icon = "https://i.imgur.com/ar2FEY1.png";
-//		}
-//	    }
-//	}
-//    }
-//    return icon;
-//}
 awards.start();
