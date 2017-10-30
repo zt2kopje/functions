@@ -1,6 +1,5 @@
 // Created by Viral of Viral's Modifications - http://viralsmods.com
 function get_icon(animal) {
-    alert(animal);
     var species = animal[1];
     var sex = animal[2];
     var now = new Date;
@@ -8,9 +7,9 @@ function get_icon(animal) {
     var genotype = animal[5];
     var icon = "";
     if (species === "Reticulated Giraffe") {
-//        if (age < 5184000000) {
-//	    icon = "https://i.imgur.com/UglWPRZ.png";
-//	} else {
+        if (age < 5184000000) {
+	    icon = "https://i.imgur.com/UglWPRZ.png";
+	} else {
 //	    if (sex === "Male") {
 //	        if (genotype.includes("B") {
 		    icon = "https://i.imgur.com/hXUzugd.png";
