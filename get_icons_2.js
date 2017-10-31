@@ -365,4 +365,4 @@ function get_icon(animal) {
     return icon;
 }
 
-alert(["5063823", "Reticulated Giraffe", "Male", "Simon", 1509368099413, "BB", 0.8, "1st Place - Royal Giraffe Parade"]);
+$(function() {alert(["5063823", "Reticulated Giraffe", "Male", "Simon", 1509368099413, "BB", 0.8, "1st Place - Royal Giraffe Parade"]);});
