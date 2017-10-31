@@ -71,13 +71,13 @@ function get_icon(animal) {
 	}
     } else if (species === "Bengal Tiger") {
         if (age < 4838400000) {
-	    if (genotype === "WW") {
+	    if (genotype.includes("W")) {
 	        icon = "bengaltiger-young";
 	    } else {
 	        icon = "bengaltiger-young-white";
 	    }
 	} else if (sex === "Male") {
-	    if (genotype === "WW") {
+	    if (genotype.includes("W")) {
 	        icon = "bengaltiger-male";
 	    } else {
 	        icon = "bengaltiger-male-white";
