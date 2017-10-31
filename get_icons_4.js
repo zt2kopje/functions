@@ -271,56 +271,56 @@ function get_icon(animal) {
 	} else {
 	    icon = "okapi-female";
 	}
-    } else if (species === "Ostrich") {
-        if (age < 1209600000) {
-	    icon = "ostrich-egg";
-	} else if (age < 2419200000) {
-	    icon = "ostrich-young";
-	} else if (sex === "Male") {
-	    if (genotype === "PP") {
-		icon = "ostrich-male";
-	    } else if (genotype === "SS") {
-	        icon = "ostrich-male-somali";
-	    } else {
-	        icon = "ostrich-male-cross";
-	    }
-	} else {
-	    if (genotype === "PP") {
-		icon = "ostrich-female";
-	    } else if (genotype === "SS") {
-	        icon = "ostrich-female-somali";
-	    } else {
-	        icon = "ostrich-female-cross";
-	    }
-	}
-    } else if (species === "Polar Bear") {
-        if (age < 6048000000) {
-	    icon = "polarbear-young";
-	} else if (sex === "Male") {
-	    icon = "polarbear-male";
-	} else {
-	    icon = "polarbear-female";
-	}
-    } else if (species === "Red Kangaroo") {
-        if (age < 1209600000) {
-	    icon = "redkangaroo-young";
-	} else if (sex === "Male") {
-	    if (genotype.includes("R")) {
-		icon = "redkangaroo-male";
-	    } else {
-	        icon = "redkangaroo-male-grey";
-	    }
-	} else {
-	    icon = "redkangaroo-female";
-	}
-    } else if (species === "Red Panda") {
-        if (age < 2419200000) {
-	    icon = "redpanda-young";
-	} else if (sex === "Male") {
-	    icon = "redpanda-male";
-	} else {
-	    icon = "redpanda-female";
-	}
+//    } else if (species === "Ostrich") {
+//        if (age < 1209600000) {
+//	    icon = "ostrich-egg";
+//	} else if (age < 2419200000) {
+//	    icon = "ostrich-young";
+//	} else if (sex === "Male") {
+//	    if (genotype === "PP") {
+//		icon = "ostrich-male";
+//	    } else if (genotype === "SS") {
+//	        icon = "ostrich-male-somali";
+//	    } else {
+//	        icon = "ostrich-male-cross";
+//	    }
+//	} else {
+//	    if (genotype === "PP") {
+//		icon = "ostrich-female";
+//	    } else if (genotype === "SS") {
+//	        icon = "ostrich-female-somali";
+//	    } else {
+//	        icon = "ostrich-female-cross";
+//	    }
+//	}
+//    } else if (species === "Polar Bear") {
+//        if (age < 6048000000) {
+//	    icon = "polarbear-young";
+//	} else if (sex === "Male") {
+//	    icon = "polarbear-male";
+//	} else {
+//	    icon = "polarbear-female";
+//	}
+//    } else if (species === "Red Kangaroo") {
+//        if (age < 1209600000) {
+//	    icon = "redkangaroo-young";
+//	} else if (sex === "Male") {
+//	    if (genotype.includes("R")) {
+//		icon = "redkangaroo-male";
+//	    } else {
+//	        icon = "redkangaroo-male-grey";
+//	    }
+//	} else {
+//	    icon = "redkangaroo-female";
+//	}
+//    } else if (species === "Red Panda") {
+//        if (age < 2419200000) {
+//	    icon = "redpanda-young";
+//	} else if (sex === "Male") {
+//	    icon = "redpanda-male";
+//	} else {
+//	    icon = "redpanda-female";
+//	}
     } else if (species === "Reticulated Giraffe") {
         if (age < 4838400000) {
 	    icon = "reticulatedgiraffe-young";
@@ -345,22 +345,22 @@ function get_icon(animal) {
 	} else {
 	    icon = "ringtailedlemur-female";
 	}
-    } else if (species === "Snow Leopard") {
-        if (age < 6048000000) {
-	    icon = "snowleopard-young";
-	} else if (sex === "Male") {
-	    icon = "snowleopard-male");
-	} else {
-	    icon = "snowleopard-female";
-	}
-    } else if (species === "Thomson's Gazelle") {
-        if (age < 2419200000) {
-	    icon = "thomsonsgazelle-young";
-	} else if (sex === "Male") {
-	    icon = "thomsonsgazelle-male");
-	} else {
-	    icon = "thomsonsgazelle-female";
-	}
+//    } else if (species === "Snow Leopard") {
+//        if (age < 6048000000) {
+//	    icon = "snowleopard-young";
+//	} else if (sex === "Male") {
+//	    icon = "snowleopard-male");
+//	} else {
+//	    icon = "snowleopard-female";
+//	}
+//    } else if (species === "Thomson's Gazelle") {
+//        if (age < 2419200000) {
+//	    icon = "thomsonsgazelle-young";
+//	} else if (sex === "Male") {
+//	    icon = "thomsonsgazelle-male");
+//	} else {
+//	    icon = "thomsonsgazelle-female";
+//	}
     }
     return icon;
 }
