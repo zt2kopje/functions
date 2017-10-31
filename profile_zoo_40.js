@@ -14,6 +14,7 @@ var awards = {
     present: function(a) {
         var award = profile_zoo.users[a];
 	var icon_64 = get_icon(award);
+	alert(icon_64);
         if ($("." + award[0] + "-awards").size() === 0 && location.href.indexOf('/profile/' + award[0] + '/') !== -1) {
             $("td.c_user").parent().after('<tr><td><dt>' + profile_zoo.name + ':</dt></td><td><dd class="' + award[0] + '-awards"><div onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" class="' + icon_64 + '" alt="' + award[1] + '"></div></dd></td></tr>');
         } else if ($("." + award[0] + "-awards").size() === 0) {
