@@ -345,24 +345,22 @@ function get_icon(animal) {
 	} else {
 	    icon = "ringtailedlemur-female";
 	}
-//    } else if (species === "Snow Leopard") {
-//        if (age < 6048000000) {
-//	    icon = "snowleopard-young";
-//	} else if (sex === "Male") {
-//	    icon = "snowleopard-male");
-//	} else {
-//	    icon = "snowleopard-female";
-//	}
-//    } else if (species === "Thomson's Gazelle") {
-//        if (age < 2419200000) {
-//	    icon = "thomsonsgazelle-young";
-//	} else if (sex === "Male") {
-//	    icon = "thomsonsgazelle-male");
-//	} else {
-//	    icon = "thomsonsgazelle-female";
-//	}
+    } else if (species === "Snow Leopard") {
+        if (age < 6048000000) {
+	    icon = "snowleopard-young";
+	} else if (sex === "Male") {
+	    icon = "snowleopard-male";
+	} else {
+	    icon = "snowleopard-female";
+	}
+    } else if (species === "Thomson's Gazelle") {
+        if (age < 2419200000) {
+	    icon = "thomsonsgazelle-young";
+	} else if (sex === "Male") {
+	    icon = "thomsonsgazelle-male");
+	} else {
+	    icon = "thomsonsgazelle-female";
+	}
     }
     return icon;
 }
-
-$(function() {alert(get_icon(["5063823", "Reticulated Giraffe", "Male", "Simon", 1509368099413, "BB", 0.8, "1st Place - Royal Giraffe Parade"]));});
