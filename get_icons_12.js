@@ -17,7 +17,7 @@ var animal_data = {
 	["Grizzly Bear", ["B", 0.5, "K", 0.3, "W", 0.2]],
 	["Hippopotamus", ["B", 1]],
 	["Indian Peafowl", ["W", 0.9, "w", 0.1], ["B", 0.8, "b", 0.2]],
-	["Jaguar", ["B", 0.05, "b", 0.95]]
+	["Jaguar", ["B", 0.05, "b", 0.95]],
 	["Moose", ["B", 0.5, "W", 0.5], ["S", 0.2, "s", 0.8]],
 	["Mountain Gorilla", ["B", 1]],
 	["Nile Crocodile", ["B", 1]],
