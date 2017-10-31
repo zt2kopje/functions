@@ -431,3 +431,62 @@ function get_icon(animal) {
     }
     return icon;
 }
+
+function get_animal_id(animal) {
+    var len = animal_data.alleles.length;
+    var i;
+    for (i = 0; i < len; i++) {
+        if (animal_data.alleles[i][0] === animal) {
+	    return i;
+	}
+    }
+    return -1;
+}
+
+function get_random_genes(animal) {
+    var id = get_animal_id(animal);
+    var gene_list = animal_data.alleles[id];
+    var len = gene_list.length;
+    var i;
+    var genotype = "";
+    for (i = 1; i < len; i++) {
+        var chance = Math.random();
+	var leng = gene_list[i].length;
+	var j;
+	for (j = 1; j < leng; j++) {
+	    if (chance < gene_list[i][j]) {
+	        genotype = genotype + gene_list[i][j-1];
+                j = leng;
+	    } else {
+	        chance = chance - gene_list[i][j];
+		j++;
+	    }
+	}
+	chance = Math.random();
+	for (j = 1; j < leng; j++) {
+	    if (chance < gene_list[i][j]) {
+	        genotype = genotype + gene_list[i][j-1];
+                j = leng;
+	    } else {
+	        chance = chance - gene_list[i][j];
+		j++;
+	    }
+	}
+    }
+    return genotype;
+}
+
+function get_species_rank(animal) {
+    var id = get_animal_id(animal)
+    return Number(animal_data.data[id][1]);
+}
+
+function get_species_fertility(animal) {
+    var id = get_animal_id(animal)
+    return Number(animal_data.data[id][2]);
+}
+
+function get_species_cost(animal) {
+    var id = get_animal_id(animal)
+    return Number(animal_data.data[id][3]);
+}
