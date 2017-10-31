@@ -357,7 +357,7 @@ function get_icon(animal) {
         if (age < 2419200000) {
 	    icon = "thomsonsgazelle-young";
 	} else if (sex === "Male") {
-	    icon = "thomsonsgazelle-male");
+	    icon = "thomsonsgazelle-male";
 	} else {
 	    icon = "thomsonsgazelle-female";
 	}
