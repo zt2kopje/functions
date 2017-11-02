@@ -1,4 +1,5 @@
 var animal_data = {
+    festival: "N",
     alleles: [
         ["African Bush Elephant", ["B", 1]],
 	["African Cheetah", ["K", 0.8, "k", 0.2]],
@@ -32,36 +33,36 @@ var animal_data = {
 	["Thomson's Gazelle", ["B", 1]],
     ],
     data: [
-        ["African Bush Elephant", 5, 1.55, 2100],
-	["African Cheetah", 3, 4, 1300],
-	["African Lion", 4, 3.5, 1800],
-	["Alpine Ibex", 2, 1.75, 1000],
-	["American Beaver", 1, 5, 600],
-	["Bengal Tiger", 4, 3.5, 1700],
-	["Black Rhinoceros", 5, 1.55, 2100],
-	["Chimpanzee", 3, 1.75, 1400],
-	["Dromedary Camel", 1, 1.65, 600],
-	["Emperor Penguin", 2, 1, 1000],
-	["Gemsbok", 3, 1.6, 1300],
-	["Giant Panda", 5, 1.75, 2200],
-	["Grant's Zebra", 3, 1.6, 1200],
-	["Greater Flamingo", 1, 1.2, 500],
-	["Grizzly Bear", 4, 3, 1600],
-	["Hippopotamus", 4, 1.55, 1800],
-	["Indian Peafowl", 1, 5, 400],
-	["Jaguar", 3, 3.5, 1200],
-	["Moose", 3, 1.6, 1400],
-	["Mountain Gorilla", 5, 1.65, 2200],
-	["Nile Crocodile", 2, 6, 900],
-	["Okapi", 4, 1.6, 1700],
-	["Ostrich", 2, 5, 800],
-	["Polar Bear", 5, 3, 2000],
-	["Red Kangaroo", 1, 1, 500],
-	["Red Panda", 2, 2.6, 900],
-	["Reticulated Giraffe", 4, 1.6, 1600],
-	["Ring-Tailed Lemur", 1, 2.3, 400],
-	["Snow Leopard", 5, 3.5, 2000],
-	["Thomson's Gazelle", 2, 1.65, 800],
+        ["African Bush Elephant", 5, 1.55, 2100, "africanbushelephant", "Y"],
+	["African Cheetah", 3, 4, 1300, "africancheetah", "Y"],
+	["African Lion", 4, 3.5, 1800, "africanlion", "Y"],
+	["Alpine Ibex", 2, 1.75, 1000, "alpineibex", "Y"],
+	["American Beaver", 1, 5, 600, "americanbeaver", "Y"],
+	["Bengal Tiger", 4, 3.5, 1700, "bengaltiger", "Y"],
+	["Black Rhinoceros", 5, 1.55, 2100, "blackrhinoceros", "Y"],
+	["Chimpanzee", 3, 1.75, 1400, "chimpanzee", "Y"],
+	["Dromedary Camel", 1, 1.65, 600, "dromedarycamel", "Y"],
+	["Emperor Penguin", 2, 1, 1000, "emperorpenguin", "Y"],
+	["Gemsbok", 3, 1.6, 1300, "gemsbok", "Y"],
+	["Giant Panda", 5, 1.75, 2200, "giantpanda", "Y"],
+	["Grant's Zebra", 3, 1.6, 1200, "grantszebra", "Y"],
+	["Greater Flamingo", 1, 1.2, 500, "greaterflamingo", "Y"],
+	["Grizzly Bear", 4, 3, 1600, "grizzlybear", "Y"],
+	["Hippopotamus", 4, 1.55, 1800, "hippopotamus", "Y"],
+	["Indian Peafowl", 1, 5, 400, "indianpeafowl", "Y"],
+	["Jaguar", 3, 3.5, 1200, "jaguar", "Y"],
+	["Moose", 3, 1.6, 1400, "moose", "Y"],
+	["Mountain Gorilla", 5, 1.65, 2200, "mountaingorilla", "Y"],
+	["Nile Crocodile", 2, 6, 900, "nilecrocodile", "Y"],
+	["Okapi", 4, 1.6, 1700, "okapi", "Y"],
+	["Ostrich", 2, 5, 800, "ostrich", "Y"],
+	["Polar Bear", 5, 3, 2000, "polarbear", "Y"],
+	["Red Kangaroo", 1, 1, 500, "redkangaroo", "Y"],
+	["Red Panda", 2, 2.6, 900, "redpanda", "Y"],
+	["Reticulated Giraffe", 4, 1.6, 1600, "reticulatedgiraffe", "Y"],
+	["Ring-Tailed Lemur", 1, 2.3, 400, "ringtailedlemur", "Y"],
+	["Snow Leopard", 5, 3.5, 2000, "snowleopard", "Y"],
+	["Thomson's Gazelle", 2, 1.65, 800, "thomsonsgazelle", "Y"],
     ]
 };
 
@@ -258,6 +259,62 @@ function get_icon(animal) {
 	        icon = "greaterflamingo-female-wild";
 	    } else {
 	        icon = "greaterflamingo-female";
+	    }
+	}
+    } else if (species === "Grizzly Bear") {
+        if (age < 4838400000) {
+	    if (genotype.includes("B")) {
+	        if (genotype.includes("K")) {
+		    icon = "grizzlybear-young";
+		} else if (genotype.includes("W")) {
+		    icon = "grizzlybear-young-lightbrown";
+		} else {
+		    icon = "grizzlybear-young-brown";
+		}
+	    } else if (genotype.includes("K")) {
+	        if (genotype.includes("W")) {
+		    icon = "grizzlybear-young-silver";
+		} else {
+		    icon = "grizzlybear-young-dark";
+		}
+	    } else {
+	        icon = "grizzlybear-young-light;
+	    }
+	} else if (sex === "Male") {
+	    if (genotype.includes("B")) {
+	        if (genotype.includes("K")) {
+		    icon = "grizzlybear-male";
+		} else if (genotype.includes("W")) {
+		    icon = "grizzlybear-male-lightbrown";
+		} else {
+		    icon = "grizzlybear-male-brown";
+		}
+	    } else if (genotype.includes("K")) {
+	        if (genotype.includes("W")) {
+		    icon = "grizzlybear-male-silver";
+		} else {
+		    icon = "grizzlybear-male-dark";
+		}
+	    } else {
+	        icon = "grizzlybear-male-light;
+	    }
+	} else {
+	    if (genotype.includes("B")) {
+	        if (genotype.includes("K")) {
+		    icon = "grizzlybear-female";
+		} else if (genotype.includes("W")) {
+		    icon = "grizzlybear-female-lightbrown";
+		} else {
+		    icon = "grizzlybear-female-brown";
+		}
+	    } else if (genotype.includes("K")) {
+	        if (genotype.includes("W")) {
+		    icon = "grizzlybear-female-silver";
+		} else {
+		    icon = "grizzlybear-female-dark";
+		}
+	    } else {
+	        icon = "grizzlybear-female-light;
 	    }
 	}
     } else if (species === "Indian Peafowl") {
