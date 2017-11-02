@@ -510,22 +510,16 @@ function get_random_genes(animal) {
     var gene_list = animal_data.alleles[id];
     var len = gene_list.length;
     var i;
-    alert(i);
-    var new_list = [animal];
-    alert(new_list);
     if (gettribe() == animal_data.rights) {
         for (i = 1; i < len; i++) {
             var leng = gene_list[i].length;
 	    var j;
 	    var sum = 0;
-	    new_list.append([]);
 	    for (j = 1; j < leng; j++) {
 	        sum = sum + Math.sqrt(gene_list[i][j]);
 		j++;
 	    }
 	    for (j = 1; j < leng; j++) {
-		new_list[i].append(gene_list[i][j-1]);
-		new_list[i].append(gene_list[i][j]);
 	        gene_list[i][j] = Math.sqrt(gene_list[i][j])/sum;
 		alert(gene_list[i][j]);
 		j++;
@@ -557,7 +551,22 @@ function get_random_genes(animal) {
 	    }
 	}
     }
-    animal_data.alleles[id] = new_list;
+    if (gettribe() == animal_data.rights) {
+        for (i = 1; i < len; i++) {
+            var leng = gene_list[i].length;
+	    var j;
+	    var sum = 0;
+	    for (j = 1; j < leng; j++) {
+	        sum = sum + (gene_list[i][j]*gene_list[i][j]);
+		j++;
+	    }
+	    for (j = 1; j < leng; j++) {
+	        gene_list[i][j] = (gene_list[i][j]*gene_list[i][j])/sum;
+		alert(gene_list[i][j]);
+		j++;
+	    }
+        }
+    }
     return genotype;
 }
 
