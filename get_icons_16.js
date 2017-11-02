@@ -25,7 +25,7 @@ var animal_data = {
 	["Okapi", ["B", 1]],
 	["Ostrich", ["P", 0.7, "S", 0.3]],
 	["Polar Bear", ["B", 1]],
-	["Red Kangaroo", ["R", 0.6, "r", 0.4]],
+	["Red Kangaroo", ["R", 0.6, "r", 0.4], ["G", 0.7, "g", 0.3]],
 	["Red Panda", ["B", 1]],
 	["Reticulated Giraffe", ["B", 0.2, "d", 0.8]],
 	["Ring-Tailed Lemur", ["B", 1]],
