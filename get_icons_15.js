@@ -435,7 +435,11 @@ function get_icon(animal) {
 	        icon = "redkangaroo-male-grey";
 	    }
 	} else {
-	    icon = "redkangaroo-female";
+	    if (genotype.includes("G")) {
+		icon = "redkangaroo-female";
+	    } else {
+	        icon = "redkangaroo-female-red";
+	    }
 	}
     } else if (species === "Red Panda") {
         if (age < 2419200000) {
