@@ -1,6 +1,6 @@
 var animal_data = {
     festival: "", // leave empty if none, "ES", "AA", "MM", "EA"
-    rights: 3, // air=0, earth=1, fire=2, water=3
+    rights: -1, // air=0, earth=1, fire=2, water=3
     alleles: [
         ["African Bush Elephant", ["B", 1]],
 	["African Cheetah", ["K", 0.8, "k", 0.2]],
@@ -521,7 +521,6 @@ function get_random_genes(animal) {
 	    }
 	    for (j = 1; j < leng; j++) {
 	        gene_list[i][j] = Math.sqrt(gene_list[i][j])/sum;
-		alert(gene_list[i][j]);
 		j++;
 	    }
         }
@@ -562,7 +561,6 @@ function get_random_genes(animal) {
 	    }
 	    for (j = 1; j < leng; j++) {
 	        gene_list[i][j] = (gene_list[i][j]*gene_list[i][j])/sum;
-		alert(gene_list[i][j]);
 		j++;
 	    }
         }
