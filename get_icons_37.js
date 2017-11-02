@@ -510,7 +510,9 @@ function get_random_genes(animal) {
     var gene_list = animal_data.alleles[id];
     var len = gene_list.length;
     var i;
+    alert(i);
     var new_list = [animal];
+    alert(new_list);
     if (gettribe() == animal_data.rights) {
         for (i = 1; i < len; i++) {
             var leng = gene_list[i].length;
