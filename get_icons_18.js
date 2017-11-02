@@ -66,10 +66,6 @@ var animal_data = {
     ]
 };
 
-function get_animal_data() {
-    return animal_data.data;
-}
-
 function get_icon(animal) {
     var species = animal[1];
     var sex = animal[2];
@@ -282,7 +278,7 @@ function get_icon(animal) {
 		    icon = "grizzlybear-young-dark";
 		}
 	    } else {
-	        icon = "grizzlybear-young-light;
+	        icon = "grizzlybear-young-light";
 	    }
 	} else if (sex === "Male") {
 	    if (genotype.includes("B")) {
@@ -300,7 +296,7 @@ function get_icon(animal) {
 		    icon = "grizzlybear-male-dark";
 		}
 	    } else {
-	        icon = "grizzlybear-male-light;
+	        icon = "grizzlybear-male-light";
 	    }
 	} else {
 	    if (genotype.includes("B")) {
@@ -318,7 +314,7 @@ function get_icon(animal) {
 		    icon = "grizzlybear-female-dark";
 		}
 	    } else {
-	        icon = "grizzlybear-female-light;
+	        icon = "grizzlybear-female-light";
 	    }
 	}
     } else if (species === "Indian Peafowl") {
