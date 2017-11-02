@@ -66,6 +66,10 @@ var animal_data = {
     ]
 };
 
+function get_animal_data() {
+    return animal_data.data;
+}
+
 function get_icon(animal) {
     var species = animal[1];
     var sex = animal[2];
