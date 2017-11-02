@@ -15,7 +15,7 @@ var awards = {
         var award = profile_zoo.users[a];
 	var icon_64 = get_icon(award);
         if ($("." + award[0] + "-awards").size() === 0 && location.href.indexOf('/profile/' + award[0] + '/') !== -1) {
-            $("td.c_user").parent().after('<tr><td><dt>' + profile_zoo.name + ':</dt></td><td><dd style="margin: 0;" class="' + award[0] + '-awards"><div onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" class="' + icon_64 + '" alt="' + award[1] + '"></div></dd></td></tr>');
+            $("td.c_user").parent().after('<tr><td style="vertical-align: top; font-size: 11px;"><dt>' + profile_zoo.name + ':</dt></td><td><dd style="margin: 0;" class="' + award[0] + '-awards"><div onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" class="' + icon_64 + '" alt="' + award[1] + '"></div></dd></td></tr>');
         } else if ($("." + award[0] + "-awards").size() === 0) {
 	    $("a.member[href=" + main_url + "profile/" + award[0] + "/]").parent().parent().next().find("dl.user_info dd.spacer").before('<dt>' + profile_zoo.name + ':</dt><dd class="' + award[0] + '-awards"><div onmouseover="awards.tooltip.open(event,' + a + ');" onmouseout="awards.tooltip.bye(' + a + ');" id="' + a + '-award" class="thumb_' + icon_64 + '" alt="' + award[1] + '"></div></dd>');
         } else if (location.href.indexOf('/profile/' + award[0] + '/') === -1) {
