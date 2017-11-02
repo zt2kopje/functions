@@ -518,14 +518,13 @@ function get_random_genes(animal) {
 	    for (j = 1; j < leng; j++) {
 	        sum = sum + gene_list[i][j]^2;
 		j++;
-		alert(sum);
 	    }
 	    for (j = 1; j < leng; j++) {
 	        gene_list[i][j] = (gene_list[i][j]^2)/sum;
 		j++;
+		alert(gene_list[i][j];
 	    }
         }
-	alert(gene_list[i]);
     }
     var genotype = "";
     for (i = 1; i < len; i++) {
