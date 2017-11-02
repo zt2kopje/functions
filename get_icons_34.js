@@ -516,11 +516,11 @@ function get_random_genes(animal) {
 	    var j;
 	    var sum = 0;
 	    for (j = 1; j < leng; j++) {
-	        sum = sum + gene_list[i][j]^2;
+	        sum = sum + (gene_list[i][j] * gene_list[i][j]);
 		j++;
 	    }
 	    for (j = 1; j < leng; j++) {
-	        gene_list[i][j] = (gene_list[i][j]^2)/sum;
+	        gene_list[i][j] = (gene_list[i][j] * gene_list[i][j])/sum;
 		alert(gene_list[i][j]);
 		j++;
 	    }
