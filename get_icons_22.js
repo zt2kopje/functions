@@ -1,6 +1,6 @@
 var animal_data = {
-    festival: "",
-    rights: 0,
+    festival: "", // "ES", "AA", "MM", "EA" for main; "" = None, "C" = Christmas, "E" = Easter, "H" = Halloween
+    rights: 3, // air=0, earth=1, fire=2, water=3
     alleles: [
         ["African Bush Elephant", ["B", 1]],
 	["African Cheetah", ["K", 0.8, "k", 0.2]],
@@ -524,6 +524,7 @@ function get_random_genes(animal) {
 		j++;
 	    }
         }
+	alert(gene_list[i]);
     }
     var genotype = "";
     for (i = 1; i < len; i++) {
