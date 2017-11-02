@@ -1,5 +1,5 @@
 var animal_data = {
-    festival: "N",
+    festival: "Y",
     alleles: [
         ["African Bush Elephant", ["B", 1]],
 	["African Cheetah", ["K", 0.8, "k", 0.2]],
