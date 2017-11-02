@@ -1,6 +1,6 @@
 var animal_data = {
-    festival: "",
-    rights: 0,
+    festival: "", // leave empty if none, "ES", "AA", "MM", "EA"
+    rights: 3, // air=0, earth=1, fire=2, water=3
     alleles: [
         ["African Bush Elephant", ["B", 1]],
 	["African Cheetah", ["K", 0.8, "k", 0.2]],
@@ -510,23 +510,23 @@ function get_random_genes(animal) {
     var gene_list = animal_data.alleles[id];
     var len = gene_list.length;
     var i;
-//    if (gettribe() == animal_data.rights) {
-//        for (i = 1; i < len; i++) {
-//            var leng = gene_list[i].length;
-//	    var j;
-//	    var sum = 0;
-//	    for (j = 1; j < leng; j++) {
-//	        sum = sum + gene_list[i][j]^2;
-//		j++;
-//		alert(sum);
-//	    }
-//	    for (j = 1; j < leng; j++) {
-//	        gene_list[i][j] = (gene_list[i][j]^2)/sum;
-//		j++;
-//	    }
-//        }
-//	alert(gene_list[i]);
-//    }
+    if (gettribe() == animal_data.rights) {
+        for (i = 1; i < len; i++) {
+            var leng = gene_list[i].length;
+	    var j;
+	    var sum = 0;
+	    for (j = 1; j < leng; j++) {
+	        sum = sum + gene_list[i][j]^2;
+		j++;
+		alert(sum);
+	    }
+	    for (j = 1; j < leng; j++) {
+	        gene_list[i][j] = (gene_list[i][j]^2)/sum;
+		j++;
+	    }
+        }
+	alert(gene_list[i]);
+    }
     var genotype = "";
     for (i = 1; i < len; i++) {
         var chance = Math.random();
