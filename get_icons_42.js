@@ -348,6 +348,14 @@ function get_icon(animal) {
 	        icon = "grizzlybear-female-light";
 	    }
 	}
+    } else if (species === "Hippopotamus") {
+        if (age < 4838400000) {
+            icon = "hippopotamus-young";
+	} else if (sex === "Male") {
+	    icon = "hippopotamus-male";
+	} else {
+	    icon = "hippopotamus";
+	}
     } else if (species === "Indian Peafowl") {
         if (age < 604800000) {
 	    icon = "indianpeafowl-egg";
@@ -400,6 +408,26 @@ function get_icon(animal) {
 	        icon = "indianpeafowl-female-white";
 	    }
 	}
+    } else if (species === "Jaguar") {
+        if (age < 3628800000) {
+	    if (genotype.includes("B")) {
+	        icon = "jaguar-young-black";
+	    } else {
+	        icon = "jaguar-young";
+	    }
+	} else if (sex === "Male") {
+	    if (genotype.includes("B")) {
+	        icon = "jaguar-male-black";
+	    } else {
+	        icon = "jaguar-male";
+	    }
+	} else {
+	    if (genotype.includes("B")) {
+	        icon = "jaguar-female-black";
+	    } else {
+	        icon = "jaguar-female";
+	    }
+	}
     } else if (species === "Moose") {
         if (age < 3628800000) {
 	    if (genotype.includes("B")) {
@@ -446,9 +474,25 @@ function get_icon(animal) {
 	} else if (age < 2419200000) {
 	    icon = "nilecrocodile-young";
 	} else if (sex === "Male") {
-	    icon = "nilecrocodile-male";
+	    if (age < 6048000000) {
+	        icon = "nilecrocodile-male-small";
+	    } else if (age < 15768000000) {
+	        icon = "nilecrocodile-male-mid";
+	    } else if (age < 31536000000) {
+	        icon = "nilecrocodile-male";
+	    } else {
+	        icon = "nilecrocodile-male-large";
+	    }
 	} else {
-	    icon = "nilecrocodile-female";
+	    if (age < 6048000000) {
+	        icon = "nilecrocodile-female-small";
+	    } else if (age < 15768000000) {
+	        icon = "nilecrocodile-female-mid";
+	    } else if (age < 31536000000) {
+	        icon = "nilecrocodile-female";
+	    } else {
+	        icon = "nilecrocodile-female-large";
+	    }
 	}
     } else if (species === "Okapi") {
         if (age < 4838400000) {
