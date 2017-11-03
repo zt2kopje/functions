@@ -12,5 +12,6 @@ var profile_zoo = {
     ["5063821", "Ring-Tailed Lemur", "Male", "Toes", 1506457900061, "BB", 1.76, "Purchased for $400."],
     ["5063821", "Nile Crocodile", "Male", "Snappy", 1507319169332, "BB", 1.69, "Purchased for $900."],
     ["5063823", "Red Kangaroo", "Male", "Bluey", 1491470915234, "Rrgg", 0.72, "Purchased for $500."],
+    ["5063823", "Jaguar", "Female", "Amazon", 1500477590028, "bb", 1.19, "Purchased for $1200."],
   ]
 };
