@@ -20,7 +20,7 @@ var animal_data = {
 	["Hippopotamus", ["B", 1]],
 	["Indian Peafowl", ["W", 0.9, "w", 0.1], ["B", 0.8, "b", 0.2]],
 	["Jaguar", ["B", 0.05, "b", 0.95]],
-	["Moose", ["B", 0.5, "W", 0.5], ["S", 0.2, "s", 0.8]],
+	["Moose", ["B", 0.55, "R", 0.45]],
 	["Mountain Gorilla", ["B", 1]],
 	["Nile Crocodile", ["B", 1]],
 	["Okapi", ["B", 1]],
@@ -398,6 +398,38 @@ function get_icon(animal) {
 		}
 	    } else {
 	        icon = "indianpeafowl-female-white";
+	    }
+	}
+    } else if (species === "Moose") {
+        if (age < 3628800000) {
+	    if (genotype.includes("B")) {
+	        if (genotype == "BB") {
+		    icon = "moose-young-dark";
+		} else {
+		    icon = "moose-young";
+		}
+	    } else {
+	        icon = "moose-young-red";
+	    }
+	} else if (sex === "Male") {
+	    if (genotype.includes("B")) {
+	        if (genotype == "BB") {
+		    icon = "moose-male-dark";
+		} else {
+		    icon = "moose-male";
+		}
+	    } else {
+	        icon = "moose-male-red";
+	    }
+	} else {
+	    if (genotype.includes("B")) {
+	        if (genotype == "BB") {
+		    icon = "moose-female-dark";
+		} else {
+		    icon = "moose-female";
+		}
+	    } else {
+	        icon = "moose-female-red";
 	    }
 	}
     } else if (species === "Mountain Gorilla") {
