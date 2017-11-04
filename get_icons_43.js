@@ -354,7 +354,7 @@ function get_icon(animal) {
 	} else if (sex === "Male") {
 	    icon = "hippopotamus-male";
 	} else {
-	    icon = "hippopotamus";
+	    icon = "hippopotamus-female";
 	}
     } else if (species === "Indian Peafowl") {
         if (age < 604800000) {
