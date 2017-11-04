@@ -205,7 +205,7 @@ function get_icon(animal) {
 	    } else if (genotype === "PP") {
 	        icon = "chimpanzee-male-pink";
 	    } else {
-	        icon = "chimpanzee-male-split";
+	        icon = "chimpanzee-male-splitface";
 	    }
 	} else {
 	    if (genotype === "BB") {
@@ -213,7 +213,7 @@ function get_icon(animal) {
 	    } else if (genotype === "PP") {
 	        icon = "chimpanzee-female-pink";
 	    } else {
-	        icon = "chimpanzee-female-split";
+	        icon = "chimpanzee-female-splitface";
 	    }
 	}
     } else if (species === "Dromedary Camel") {
