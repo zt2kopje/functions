@@ -42,7 +42,7 @@ var animal_data = {
 	["Bengal Tiger", 4, 3.5, 1700, "bengaltiger", "Y"],
 	["Black Rhinoceros", 5, 1.55, 2100, "blackrhinoceros", "Y"],
 	["Chimpanzee", 3, 1.75, 1400, "chimpanzee", "Y"],
-	["Dromedary Camel", 1, 1.65, 600, "dromedary", "Y"],
+	["Dromedary Camel", 1, 1.65, 600, "dromedarycamel", "Y"],
 	["Emperor Penguin", 2, 1, 1000, "emperorpenguin", "Y"],
 	["Gemsbok", 3, 1.6, 1300, "gemsbok", "Y"],
 	["Giant Panda", 5, 1.75, 2200, "giantpanda", "Y"],
@@ -219,21 +219,21 @@ function get_icon(animal) {
     } else if (species === "Dromedary Camel") {
         if (age < 1209600000) {
 	    if (genotype.includes("F")) {
-	        icon = "dromedary-young";
+	        icon = "dromedarycamel-young";
 	    } else {
-	        icon = "dromedary-young-white";
+	        icon = "dromedarycamel-young-white";
 	    }
 	} else if (sex === "Male") {
 	    if (genotype.includes("F")) {
-	        icon = "dromedary-male";
+	        icon = "dromedarycamel-male";
 	    } else {
-	        icon = "dromedary-male-white";
+	        icon = "dromedarycamel-male-white";
 	    }
 	} else {
 	    if (genotype.includes("F")) {
-	        icon = "dromedary-female";
+	        icon = "dromedarycamel-female";
 	    } else {
-	        icon = "dromedary-female-white";
+	        icon = "dromedarycamel-female-white";
 	    }
 	}
     } else if (species === "Emperor Penguin") {
