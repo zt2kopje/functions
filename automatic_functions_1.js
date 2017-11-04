@@ -11,6 +11,12 @@ function gettribe() {
     return Number(id % 4);
 }
 
+// Reloads sprites on the page.
+function reload_sprites() {
+    var queryString = '?reload=' + new Date().getTime();
+    $("link#sprites_sheet").href = $("link#sprites_sheet").href.replace(/\?.*|$/, queryString);
+}
+
 $(function () {
     
     // Changes tribe forum icons.
