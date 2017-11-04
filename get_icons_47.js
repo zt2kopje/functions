@@ -274,6 +274,14 @@ function get_icon(animal) {
 	        icon = "giantpanda-female-brown";
 	    }
 	}
+    } else if (species === "Grant's Zebra") {
+        if (age < 3628800000) {
+	    icon = "grantszebra-young";
+	} else if (sex === "Male") {
+	    icon = "grantszebra-male";
+	} else {
+	    icon = "grantszebra-female";
+	}
     } else if (species === "Greater Flamingo") {
         if (age < 604800000) {
 	    icon = "greaterflamingo-egg";
