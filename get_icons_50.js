@@ -647,7 +647,6 @@ function get_random_genes(animal) {
 	for (j = 1; j < leng; j++) {
 	    if (chance < gene_list[i][j]) {
 	        genotype = genotype + gene_list[i][j-1];
-		alert(gene_list[i][j-1] + " " + gene_list[i][j]);
                 j = leng;
 	    } else {
 	        chance = chance - gene_list[i][j];
@@ -658,7 +657,6 @@ function get_random_genes(animal) {
 	for (j = 1; j < leng; j++) {
 	    if (chance < gene_list[i][j]) {
 	        genotype = genotype + gene_list[i][j-1];
-		alert(gene_list[i][j-1] + " " + gene_list[i][j]);
                 j = leng;
 	    } else {
 	        chance = chance - gene_list[i][j];
