@@ -116,7 +116,7 @@ function get_icon(animal) {
 	        icon = "africanlion-young-white";
 	    }
 	} else if (sex === "Male") {
-	    if (genotype === "W") {
+	    if (genotype.includes("W")) {
 	        if (genotype.includes("F")) {
 	            icon = "africanlion-male-fullmane";
 	        } else {
