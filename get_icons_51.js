@@ -18,7 +18,7 @@ var animal_data = {
 	["Greater Flamingo", ["W", 0.2, "w", 0.8]],
 	["Grizzly Bear", ["B", 0.5, "K", 0.3, "W", 0.2]],
 	["Hippopotamus", ["B", 1]],
-	["Indian Peafowl", ["W", 0.9, "w", 0.1], ["B", 0.8, "b", 0.2]],
+	["Indian Peafowl", ["W", 0.8, "w", 0.1, "p", 0.1], ["B", 0.8, "b", 0.2], ["E", 0.9, "e", 0.1]],
 	["Jaguar", ["B", 0.05, "b", 0.95]],
 	["Moose", ["B", 0.55, "R", 0.45]],
 	["Mountain Gorilla", ["B", 1]],
@@ -27,7 +27,7 @@ var animal_data = {
 	["Ostrich", ["P", 0.7, "S", 0.3]],
 	["Polar Bear", ["B", 1]],
 	["Red Kangaroo", ["R", 0.6, "r", 0.4], ["G", 0.7, "g", 0.3]],
-	["Red Panda", ["B", 1]],
+	["Red Panda", ["W", 0.5, "w", 0.5]],
 	["Reticulated Giraffe", ["B", 0.2, "d", 0.8]],
 	["Ring-Tailed Lemur", ["B", 1]],
 	["Snow Leopard", ["B", 1]],
@@ -386,15 +386,59 @@ function get_icon(animal) {
 	} else if (sex === "Male") {
 	    if (genotype.includes("WW")) {
 	        if (genotype.includes("B")) {
-		    icon = "indianpeafowl-male";
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male";
+		    } else {
+		        icon = "indianpeafowl-male-whiteeye";
+		    }
 		} else {
-		    icon = "indianpeafowl-male-blackshoulder";
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male-blackshoulder";
+		    } else {
+		        icon = "indianpeafowl-male-blackshoulderwhiteeye";
+		    }
 		}
 	    } else if (genotype.includes("W")) {
 	        if (genotype.includes("B")) {
-		    icon = "indianpeafowl-male-split";
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male-split";
+		    } else {
+		        icon = "indianpeafowl-male-splitwhiteeye";
+		    }
 		} else {
-		    icon = "indianpeafowl-male-blackshouldersplit";
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male-blackshouldersplit";
+		    } else {
+		        icon = "indianpeafowl-male-blackshouldersplitwhiteeye";
+		    }
+		}
+	    } else if (genotype.includes("pp")) {
+	        if (genotype.includes("B")) {
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male-pied";
+		    } else {
+		        icon = "indianpeafowl-male-piedwhiteeye";
+		    }
+		} else {
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male-blackshoulderpied";
+		    } else {
+		        icon = "indianpeafowl-male-blackshoulderpiedwhiteeye";
+		    }
+		}
+	    } else if (genotype.includes("p")) {
+	        if (genotype.includes("B")) {
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male-loudpied";
+		    } else {
+		        icon = "indianpeafowl-male-silverpied";
+		    }
+		} else {
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-male-blackshoulderloudpied";
+		    } else {
+		        icon = "indianpeafowl-male-blackshouldersilverpied";
+		    }
 		}
 	    } else {
 	        icon = "indianpeafowl-male-white";
@@ -402,15 +446,35 @@ function get_icon(animal) {
 	} else {
 	    if (genotype.includes("WW")) {
 	        if (genotype.includes("B")) {
-		    icon = "indianpeafowl-female";
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-female";
+		    } else {
+		        icon = "indianpeafowl-female-whiteeye";
+		    }
 		} else {
 		    icon = "indianpeafowl-female-blackshoulder";
 		}
 	    } else if (genotype.includes("W")) {
 	        if (genotype.includes("B")) {
-		    icon = "indianpeafowl-female-split";
+		    if (genotype.includes("E")) {
+		        icon = "indianpeafowl-female-split";
+		    } else {
+		        icon = "indianpeafowl-female-splitwhiteeye";
+		    }
 		} else {
 		    icon = "indianpeafowl-female-blackshouldersplit";
+		}
+	    } else if (genotype.includes("pp")) {
+	        if (genotype.includes("B")) {
+		    icon = "indianpeafowl-female-pied";
+		} else {
+		    icon = "indianpeafowl-female-blackshoulderpied";
+		}
+	    } else if (genotype.includes("p")) {
+	        if (genotype.includes("B")) {
+		    icon = "indianpeafowl-female-loudpied";
+		} else {
+		    icon = "indianpeafowl-female-blackshoulderloudpied";
 		}
 	    } else {
 	        icon = "indianpeafowl-female-white";
@@ -558,11 +622,23 @@ function get_icon(animal) {
 	}
     } else if (species === "Red Panda") {
         if (age < 2419200000) {
-	    icon = "redpanda-young";
+	    if (genotype.includes("ww")) {
+		icon = "redpanda-young-whiteface";
+	    } else {
+	        icon = "redpanda-young";
+	    }
 	} else if (sex === "Male") {
-	    icon = "redpanda-male";
+	    if (genotype.includes("ww")) {
+		icon = "redpanda-male-whiteface";
+	    } else {
+	        icon = "redpanda-male";
+	    }
 	} else {
-	    icon = "redpanda-female";
+	    if (genotype.includes("ww")) {
+		icon = "redpanda-female-whiteface";
+	    } else {
+	        icon = "redpanda-female";
+	    }
 	}
     } else if (species === "Reticulated Giraffe") {
         if (age < 4838400000) {
