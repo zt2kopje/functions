@@ -13,6 +13,7 @@ var animal_data = {
 	["Dromedary Camel", ["F", 0.7, "f", 0.3]],
 	["Emperor Penguin", ["B", 1]],
 	["Gemsbok", ["B", 1]],
+	["Giant Anteater", ["B", 1]],
 	["Giant Panda", ["B", 0.8, "b", 0.2]],
 	["Grant's Zebra", ["B", 1]],
 	["Greater Flamingo", ["W", 0.2, "w", 0.8]],
@@ -20,11 +21,13 @@ var animal_data = {
 	["Hippopotamus", ["B", 1]],
 	["Indian Peafowl", ["W", 0.8, "w", 0.1, "p", 0.1], ["B", 0.8, "b", 0.2], ["E", 0.9, "e", 0.1]],
 	["Jaguar", ["B", 0.05, "b", 0.95]],
+	["Malayan Tapir", ["B", 1]],
 	["Moose", ["B", 0.55, "R", 0.45]],
 	["Mountain Gorilla", ["B", 1]],
 	["Nile Crocodile", ["B", 1]],
 	["Okapi", ["B", 1]],
 	["Ostrich", ["P", 0.7, "S", 0.3]],
+	["Platypus", ["B", 1]],
 	["Polar Bear", ["B", 1]],
 	["Red Kangaroo", ["R", 0.6, "r", 0.4], ["G", 0.7, "g", 0.3]],
 	["Red Panda", ["W", 0.5, "w", 0.5]],
@@ -45,6 +48,7 @@ var animal_data = {
 	["Dromedary Camel", 1, 1.65, 600, "dromedarycamel", "Y"],
 	["Emperor Penguin", 2, 1, 1000, "emperorpenguin", "Y"],
 	["Gemsbok", 3, 1.6, 1300, "gemsbok", "Y"],
+	["Giant Anteater", 2, 1, 1000, "giantanteater", "N"], 
 	["Giant Panda", 5, 1.75, 2200, "giantpanda", "Y"],
 	["Grant's Zebra", 3, 1.6, 1200, "grantszebra", "Y"],
 	["Greater Flamingo", 1, 1.2, 500, "greaterflamingo", "Y"],
@@ -52,11 +56,13 @@ var animal_data = {
 	["Hippopotamus", 4, 1.55, 1800, "hippopotamus", "Y"],
 	["Indian Peafowl", 1, 5, 400, "indianpeafowl", "Y"],
 	["Jaguar", 3, 3.5, 1200, "jaguar", "Y"],
+	["Malayan Tapir", 3, 1.6, 1300, "malayantapir", "N"],
 	["Moose", 3, 1.6, 1400, "moose", "Y"],
 	["Mountain Gorilla", 5, 1.65, 2200, "mountaingorilla", "Y"],
 	["Nile Crocodile", 2, 6, 900, "nilecrocodile", "Y"],
 	["Okapi", 4, 1.6, 1700, "okapi", "Y"],
 	["Ostrich", 2, 5, 800, "ostrich", "Y"],
+	["Platypus", 4, 2.6, 1600, "platypus", "N"],
 	["Polar Bear", 5, 3, 2000, "polarbear", "Y"],
 	["Red Kangaroo", 1, 1, 500, "redkangaroo", "Y"],
 	["Red Panda", 2, 2.6, 900, "redpanda", "Y"],
@@ -253,6 +259,14 @@ function get_icon(animal) {
 	    icon = "gemsbok-male";
 	} else {
 	    icon = "gemsbok-female";
+	}
+    } else if (species === "Giant Anteater") {
+        if (age < 2419200000) {
+	    icon = "giantanteater-young";
+	} else if (sex === "Male") {
+	    icon = "giantanteater-male";
+	} else {
+	    icon = "giantanteater-female";
 	}
     } else if (species === "Giant Panda") {
         if (age < 6048000000) {
@@ -500,6 +514,14 @@ function get_icon(animal) {
 	        icon = "jaguar-female";
 	    }
 	}
+    } else if (species === "Malayan Tapir") {
+        if (age < 3628800000) {
+	    icon = "malayantapir-young";
+	} else if (sex === "Male") {
+	    icon = "malayantapir-male";
+	} else {
+	    icon = "malayantapir-female";
+	}
     } else if (species === "Moose") {
         if (age < 3628800000) {
 	    if (genotype.includes("B")) {
@@ -595,6 +617,16 @@ function get_icon(animal) {
 	    } else {
 	        icon = "ostrich-female-cross";
 	    }
+	}
+    } else if (species === "Platypus") {
+        if (age < 2419200000) {
+            icon = "platypus-egg";
+	} else if (age < 4838400000) {
+	    icon = "platypus-young";
+	} else if (sex === "Male") {
+	    icon = "platypus-male";
+	} else {
+	    icon = "platypus-female";
 	}
     } else if (species === "Polar Bear") {
         if (age < 6048000000) {
