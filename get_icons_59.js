@@ -190,7 +190,7 @@ function get_icon(animal) {
 	        icon = "bengaltiger-male-white";
 	    }
 	} else {
-	    if (genotype === "WW") {
+	    if (genotype.includes("W")) {
 	        icon = "bengaltiger-female";
 	    } else {
 	        icon = "bengaltiger-female-white";
@@ -713,7 +713,7 @@ function get_icon(animal) {
     } else if (species === "Moose") {
         if (age < 3628800000) {
 	    if (genotype.includes("B")) {
-	        if (genotype == "BB") {
+	        if (genotype.includes("BB")) {
 		    icon = "moose-young-dark";
 		} else {
 		    icon = "moose-young";
@@ -723,7 +723,7 @@ function get_icon(animal) {
 	    }
 	} else if (sex === "Male") {
 	    if (genotype.includes("B")) {
-	        if (genotype == "BB") {
+	        if (genotype.includes("BB")) {
 		    icon = "moose-male-dark";
 		} else {
 		    icon = "moose-male";
@@ -733,7 +733,7 @@ function get_icon(animal) {
 	    }
 	} else {
 	    if (genotype.includes("B")) {
-	        if (genotype == "BB") {
+	        if (genotype.includes("BB")) {
 		    icon = "moose-female-dark";
 		} else {
 		    icon = "moose-female";
