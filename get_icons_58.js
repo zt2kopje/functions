@@ -9,7 +9,7 @@ var animal_data = {
 	["American Beaver", ["B", 1]],
 	["Bengal Tiger", ["W", 0.8, "w", 0.2]],
 	["Black Rhinoceros", ["B", 1]],
-	["Budgerigar", ["B", 0.5, "b", 0.5], ["G", 0.05, "g", 0.95], ["D", 0.1, "d", 0.9], ["S", 0.2, "s", 0.8], ["A", 0.85, "a", 0.15]],
+	["Budgerigar", ["B", 0.5, "b", 0.5], ["G", 0.05, "g", 0.95], ["D", 0.1, "d", 0.9], ["S", 0.1, "s", 0.9], ["A", 0.75, "a", 0.25]],
 	["Chimpanzee", ["B", 0.7, "P", 0.3]],
 	["Dromedary Camel", ["F", 0.7, "f", 0.3]],
 	["Emperor Penguin", ["B", 1]],
