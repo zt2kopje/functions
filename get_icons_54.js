@@ -9,6 +9,7 @@ var animal_data = {
 	["American Beaver", ["B", 1]],
 	["Bengal Tiger", ["W", 0.8, "w", 0.2]],
 	["Black Rhinoceros", ["B", 1]],
+	["Budgerigar", ["B", 0.5, "b", 0.5], ["G", 0.05, "g", 0.95], ["D", 0.1, "d", 0.9], ["S", 0.2, "s", 0.8], ["A", 0.85, "a", 0.15]],
 	["Chimpanzee", ["B", 0.7, "P", 0.3]],
 	["Dromedary Camel", ["F", 0.7, "f", 0.3]],
 	["Emperor Penguin", ["B", 1]],
@@ -44,6 +45,7 @@ var animal_data = {
 	["American Beaver", 1, 5, 600, "americanbeaver", "Y"],
 	["Bengal Tiger", 4, 3.5, 1700, "bengaltiger", "Y"],
 	["Black Rhinoceros", 5, 1.55, 2100, "blackrhinoceros", "Y"],
+	["Budgerigar", 1, 5, 100, "budgerigar", "G"],
 	["Chimpanzee", 3, 1.75, 1400, "chimpanzee", "Y"],
 	["Dromedary Camel", 1, 1.65, 600, "dromedarycamel", "Y"],
 	["Emperor Penguin", 2, 1, 1000, "emperorpenguin", "Y"],
@@ -201,6 +203,192 @@ function get_icon(animal) {
 	    icon = "blackrhinoceros-male";
 	} else {
 	    icon = "blackrhinoceros-female";
+	}
+    } else if (species === "Budgerigar") {
+        if (age < 604800000) {
+	    icon = "budgerigar-egg";
+	} else if (age < 1209600000) {
+	    icon = "budgerigar-young";
+	} else if (sex === "Male") {
+	    if (genotype.includes("B")) {
+	        if (genotype.includes("G")) {
+		    if (genotype.includes("aa")) {
+		        icon = "budgerigar-male-greylutino";
+		    } else if (genotype.includes("SS")) {
+			icon = "budgerigar-male-yellowgreyspalding";
+		    } else if (genotype.includes("S")) {
+			if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-greyolivespalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-darkgreygreenspalding";
+			} else {
+			    icon = "budgerigar-male-greygreenspalding";
+			}
+		    } else {
+		    	if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-greyolive";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-darkgreygreen";
+			} else {
+			    icon = "budgerigar-male-greygreen";
+			}
+		    }
+		} else {
+		    if (genotype.includes("aa")) {
+		        icon = "budgerigar-male-lutino";
+		    } else if (genotype.includes("SS")) {
+			icon = "budgerigar-male-yellowspalding";
+		    } else if (genotype.includes("S")) {
+			if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-olivespalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-darkgreenspalding";
+			} else {
+			    icon = "budgerigar-male-spalding";
+			}
+		    } else {
+		    	if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-olive";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-darkgreen";
+			} else {
+			    icon = "budgerigar-male";
+			}
+		    }
+	        }
+	    } else {
+	        if (genotype.includes("aa")) {
+		    icon = "budgerigar-male-albino";
+		} else if (genotype.includes("SS")) {
+		    icon = "budgerigar-male-whitespalding";
+		} else if (genotype.includes("S")) {
+		    if (genotype.includes("G")) {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-darkgreyspalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-greyspalding";
+			} else {
+			    icon = "budgerigar-male-greyspalding";
+			}
+		    } else {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-mauvespalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-cobaltspalding";
+			} else {
+			    icon = "budgerigar-male-bluespalding";
+			}		    
+		    }
+		} else {
+		    if (genotype.includes("G")) {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-darkgrey";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-grey";
+			} else {
+			    icon = "budgerigar-male-grey";
+			}
+		    } else {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-male-mauve";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-male-cobalt";
+			} else {
+			    icon = "budgerigar-male-blue";
+			}		    
+		    }
+		}
+	    }
+	} else {
+	    if (genotype.includes("B")) {
+	        if (genotype.includes("G")) {
+		    if (genotype.includes("aa")) {
+		        icon = "budgerigar-female-greylutino";
+		    } else if (genotype.includes("SS")) {
+			icon = "budgerigar-female-yellowgreyspalding";
+		    } else if (genotype.includes("S")) {
+			if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-greyolivespalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-darkgreygreenspalding";
+			} else {
+			    icon = "budgerigar-female-greygreenspalding";
+			}
+		    } else {
+		    	if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-greyolive";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-darkgreygreen";
+			} else {
+			    icon = "budgerigar-female-greygreen";
+			}
+		    }
+		} else {
+		    if (genotype.includes("aa")) {
+		        icon = "budgerigar-female-lutino";
+		    } else if (genotype.includes("SS")) {
+			icon = "budgerigar-female-yellowspalding";
+		    } else if (genotype.includes("S")) {
+			if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-olivespalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-darkgreenspalding";
+			} else {
+			    icon = "budgerigar-female-spalding";
+			}
+		    } else {
+		    	if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-olive";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-darkgreen";
+			} else {
+			    icon = "budgerigar-female";
+			}
+		    }
+	        }
+	    } else {
+	        if (genotype.includes("aa")) {
+		    icon = "budgerigar-female-albino";
+		} else if (genotype.includes("SS")) {
+		    icon = "budgerigar-female-whitespalding";
+		} else if (genotype.includes("S")) {
+		    if (genotype.includes("G")) {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-darkgreyspalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-greyspalding";
+			} else {
+			    icon = "budgerigar-female-greyspalding";
+			}
+		    } else {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-mauvespalding";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-cobaltspalding";
+			} else {
+			    icon = "budgerigar-female-bluespalding";
+			}		    
+		    }
+		} else {
+		    if (genotype.includes("G")) {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-darkgrey";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-grey";
+			} else {
+			    icon = "budgerigar-female-grey";
+			}
+		    } else {
+		        if (genotype.includes("DD")) {
+			    icon = "budgerigar-female-mauve";
+			} else if (genotype.includes("D")) {
+			    icon = "budgerigar-female-cobalt";
+			} else {
+			    icon = "budgerigar-female-blue";
+			}		    
+		    }
+		}
+	    }
 	}
     } else if (species === "Chimpanzee") {
         if (age < 3628800000) {
