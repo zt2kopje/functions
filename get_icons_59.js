@@ -45,7 +45,7 @@ var animal_data = {
 	["American Beaver", 1, 5, 600, "americanbeaver", "Y"],
 	["Bengal Tiger", 4, 3.5, 1700, "bengaltiger", "Y"],
 	["Black Rhinoceros", 5, 1.55, 2100, "blackrhinoceros", "Y"],
-	["Budgerigar", 1, 5, 100, "budgerigar", "Y"],
+	["Budgerigar", 1, 5, 100, "budgerigar", "G"],
 	["Chimpanzee", 3, 1.75, 1400, "chimpanzee", "Y"],
 	["Dromedary Camel", 1, 1.65, 600, "dromedarycamel", "Y"],
 	["Emperor Penguin", 2, 1, 1000, "emperorpenguin", "Y"],
