@@ -15,7 +15,7 @@ if ($("div#top_info a[href*='profile/6148649/']").length > 0 || $("div#top_info 
 }
 
 $("a[href*='/profile/3526617/']").each(function() {
-   if (Math.random() < 0.2) {
+   if (Math.random() < 0.02) {
        $(this).text("Sheahter");
    }
 });
