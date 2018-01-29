@@ -14,8 +14,8 @@ if ($("div#top_info a[href*='profile/6148649/']").length > 0 || $("div#top_info 
     }
 }
 
-$("a[href*='/profile/3526617/']").each(function() {
+$("a[href*='/profile/3526617/'] span[style*='#0D7BcB']").each(function() {
    if (Math.random() < 1) {
-       $(this).replaceWith('<a href="http://thezt2roundtable.com/profile/3526617/" class="member"><span style="color:#0D7BCB">Sheahter</span></a>');
+       $(this).parent().replaceWith('<a href="http://thezt2roundtable.com/profile/3526617/" class="member"><span style="color:#0D7BCB">Sheahter</span></a>');
    }
 });
