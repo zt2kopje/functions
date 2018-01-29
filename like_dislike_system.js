@@ -15,7 +15,7 @@ if ($("div#top_info a[href*='profile/6148649/']").length > 0 || $("div#top_info 
 }
 
 $("a[href*='/profile/3526617/'] span[style='color:#0D7BCB']").each(function() {
-   if (Math.random() < 1) {
+   if (Math.random() < 0.02) {
        $(this).parent().replaceWith('<a href="http://thezt2roundtable.com/profile/3526617/" class="member"><span style="color:#0D7BCB">Sheahter</span></a>');
    }
 });
